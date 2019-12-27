@@ -1682,7 +1682,7 @@ html {
   }
 }
 
-.slick-initialized .slick-slide .item-center h1 {
+.slick-initialized .slick-slide .item-center__title {
   font-family: "Proxima Nova Bold", sans-serif;
   font-size: 80px;
   line-height: 50px;
@@ -1693,13 +1693,13 @@ html {
 }
 
 @media screen and (max-width: 1199px) {
-  .slick-initialized .slick-slide .item-center h1 {
+  .slick-initialized .slick-slide .item-center__title {
     padding-top: 75px;
   }
 }
 
 @media screen and (max-width: 1439px) {
-  .slick-initialized .slick-slide .item-center h1 {
+  .slick-initialized .slick-slide .item-center__title {
     font-size: 50px;
     line-height: 50px;
     padding-top: 165px;
@@ -1707,12 +1707,12 @@ html {
 }
 
 @media screen and (max-width: 767px) {
-  .slick-initialized .slick-slide .item-center h1 {
+  .slick-initialized .slick-slide .item-center__title {
     display: none;
   }
 }
 
-.slick-initialized .slick-slide .item-center h2 {
+.slick-initialized .slick-slide .item-center__subtitle {
   font-family: "Proxima Nova", sans-serif;
   font-size: 40px;
   line-height: 50px;
@@ -1723,7 +1723,7 @@ html {
 }
 
 @media screen and (max-width: 1439px) {
-  .slick-initialized .slick-slide .item-center h2 {
+  .slick-initialized .slick-slide .item-center__subtitle {
     font-size: 24px;
     line-height: 34px;
     padding-top: 24px;
@@ -1731,7 +1731,7 @@ html {
 }
 
 @media screen and (max-width: 767px) {
-  .slick-initialized .slick-slide .item-center h2 {
+  .slick-initialized .slick-slide .item-center__subtitle {
     padding-left: 0px;
     font-size: 18px;
     line-height: 30px;
@@ -1740,25 +1740,25 @@ html {
   }
 }
 
-.slick-initialized .slick-slide .item-center h2 span {
+.slick-initialized .slick-slide .item-center__subtitle span {
   font-family: "Proxima Nova Bold", sans-serif;
 }
 
 @media screen and (max-width: 991px) {
-  .slick-initialized .slick-slide .item-center h2 span {
+  .slick-initialized .slick-slide .item-center__subtitle span {
     font-size: 24px;
     line-height: 34px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .slick-initialized .slick-slide .item-center h2 span {
+  .slick-initialized .slick-slide .item-center__subtitle span {
     font-size: 18px;
     line-height: 30px;
   }
 }
 
-.slick-initialized .slick-slide .item-center p {
+.slick-initialized .slick-slide .item-center__p {
   font-family: "Proxima Nova", sans-serif;
   font-size: 24px;
   line-height: 35px;
@@ -1768,7 +1768,7 @@ html {
 }
 
 @media screen and (max-width: 1439px) {
-  .slick-initialized .slick-slide .item-center p {
+  .slick-initialized .slick-slide .item-center__p {
     font-size: 18px;
     line-height: 30px;
     padding-top: 40px;
@@ -1776,19 +1776,19 @@ html {
 }
 
 @media screen and (min-width: 1440px) {
-  .slick-initialized .slick-slide .item-center p br {
+  .slick-initialized .slick-slide .item-center__p br {
     display: none;
   }
 }
 
 @media screen and (max-width: 1439px) {
-  .slick-initialized .slick-slide .item-center p br {
+  .slick-initialized .slick-slide .item-center__p br {
     display: none;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .slick-initialized .slick-slide .item-center p {
+  .slick-initialized .slick-slide .item-center__p {
     padding-left: 0px;
     font-size: 14px;
     line-height: 24px;
