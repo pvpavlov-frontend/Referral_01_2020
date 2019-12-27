@@ -1,0 +1,1755 @@
+@import 'reset'
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap')
+
+$colormain: #FFAC00
+$text: #31150D
+.colormain 
+  color: $colormain
+html
+  scroll-behavior: smooth 
+.body
+  background: #fff
+.container
+  max-width: 1270px
+  margin: 0 auto
+  padding: 0 15px
+.default-btn
+  background: $colormain
+  height: 1% //For IE7 
+  border: 0
+  color: #fff
+  cursor: pointer
+  font-family: "Proxima Nova", sans-serif
+  font-size: 20px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 336.53px
+  height: 83.44px
+  outline: none
+  box-shadow: -1px 17px 14px -12px #858285
+  margin: 0 auto
+  position: relative
+  z-index: 0
+  letter-spacing: 1.25px
+  @media screen and (max-width: 767px)
+    font-size: 16px
+    line-height: 24px
+    width: 282px
+    height: 70px
+  @media screen and (max-width: 370px)
+    width: 282px
+  img
+    margin-left: 25px
+    @media screen and (max-width: 767px)  
+      margin-left: 40px
+  &-trans
+    background: transparent
+    box-shadow: none
+    border: 1px solid $text
+    height: 61px
+    color: $text
+    font-family: Open Sans, sans-serif
+    letter-spacing: 0
+    font-size: 20px
+    line-height: 27px
+    text-transform: capitalize
+    &:focus
+      border: 1px solid $text !important
+    &:hover::before
+      background: #FFEFCE
+    @media screen and (max-width: 991px)
+      width: 282px
+    @media screen and (max-width: 767px)
+      width: 184px
+      height: 50px  
+      font-size: 16px
+      line-height: 22px
+.default-btn::before
+  -webkit-transition: opacity .3s linear
+  transition: opacity .3s linear
+  position: absolute
+  content: ""
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: -1
+  background: $colormain
+  height: 1% //For IE7
+  opacity: 0
+.default-btn:hover::before
+  opacity: 1
+  outline: 0
+.default-btn:focus
+  outline: 0
+  opacity: 1
+  border: 0
+
+.bold
+  font-family: "Proxima Nova Bold", sans-serif
+.nowrap_space
+  white-space: nowrap
+
+//section main
+.main
+  &-container
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    @media screen and (max-width: 1199px)
+      max-width: 992px
+      margin: 0 auto
+
+  background-image: url(../img/main-bg-newx4.jpg)
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  position: relative
+  padding-bottom: 14%
+  @media screen and (min-width: 3000px)
+    padding-bottom: 33%
+  @media screen and (min-width: 2500px) and (max-width: 2999px)
+    padding-bottom: 33%
+  @media screen and (min-width: 1921px) and (max-width: 2499px)
+    padding-bottom: 23%
+ 
+
+  @media screen and (max-width: 991px)
+    background: none
+    padding-bottom: 0
+  &-img
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: auto
+
+  &-section
+    background-color: #fff
+    position: relative
+    z-index: 2
+    @media screen and (max-width: 991px)
+      background-image: url(../img/main-bg-tab.png)
+      background-position: top center
+      background-repeat: no-repeat
+      background-size: 100% 87%
+    @media screen and (max-width: 1199px)
+        overflow: hidden
+    &__rules
+      a
+        font-family: "Proxima Nova Bold", sans-serif
+        font-size: 22px
+        line-height: 40px
+        letter-spacing: 0.8px
+        color: $text
+        text-transform: none
+        margin-top: 27px
+        display: inline-block
+        text-decoration: none
+        @media screen and (max-width: 767px)
+          font-size: 14px
+          letter-spacing: 0
+          margin-top: 4px         
+        &:hover
+          text-decoration-line: underline
+        img
+          margin-left: 10px
+          @media screen and (max-width: 767px)
+            margin-left: 5px
+            width: 13px        
+  &-left
+    flex: 0 0 45.6%
+    max-width: 45.6%
+    text-align: center
+    padding: 92px 15px 147px
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: end
+    -ms-flex-pack: end
+    justify-content: flex-end
+    @media screen and (max-width: 1715px)
+      padding-bottom: 80px
+    @media screen and (max-width: 1199px)
+      -webkit-box-pack: center
+      -ms-flex-pack: center
+      justify-content: center
+    @media screen and (max-width: 991px)
+      flex: 0 0 100%
+      max-width: 100%
+      padding-top: 95px
+      padding-bottom: 0
+      margin-bottom: -40px
+    @media screen and (max-width: 767px)
+      padding-top: 18px
+      margin-bottom: 0px
+    &__excerpt
+      color: $text
+      font-family: "Proxima Nova Bold", sans-serif
+      font-size: 24px
+      line-height: 54px
+      text-transform: uppercase
+      letter-spacing: 1px
+      @media screen and (max-width: 1600px)
+        font-size: 20px
+      @media screen and (max-width: 991px)
+        font-size: 24px
+        line-height: 54px
+      @media screen and (max-width: 767px)
+        font-size: 14px
+        line-height: 54px
+    &-shell
+      position: relative
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-orient: vertical
+      -webkit-box-direction: normal
+      -ms-flex-direction: column
+      flex-direction: column
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      @media screen and (max-width: 1199px)
+        -webkit-box-flex: 0
+        -ms-flex: 0 0 100%
+        flex: 0 0 100%
+        max-width: 100%
+      &:before
+        content: ''
+        width: 100%
+        height: 100%
+        display: block
+        background: -webkit-radial-gradient(at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 75%)
+        background: -o-radial-gradient(at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 75%)
+        background: radial-gradient(at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 75%)
+        -webkit-opacity: 0.8
+        -moz-opacity: 0.8
+        opacity: 0.8
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1        
+    &-data
+      position: relative
+      z-index: 3
+      text-transform: uppercase
+      text-align: left
+      @media screen and (max-width: 991px)
+        text-align: center
+        padding-bottom: 27px
+      @media screen and (max-width: 767px)
+        padding-bottom: 15px
+    &__title
+      color: $colormain
+      font-size: 70px
+      line-height: 65px
+      margin: 33px 0 -3px
+      @media screen and (max-width: 1420px)
+        font-size: 50px
+        line-height: 50px
+        margin: 55px 0 20px
+      @media screen and (max-width: 991px)
+        max-width: 640px
+        font-size: 50px
+        line-height: 60px
+        margin-top: 22px
+        margin-bottom: -1px
+      @media screen and (max-width: 767px)
+        font-size: 26px
+        line-height: 40px
+        margin-top: 8px
+        margin-bottom: -25px
+      span
+        display: block
+        @media screen and (max-width: 991px)
+          display: inline    
+    &__text
+      color: $colormain
+      font-family: "Proxima Nova Bold", sans-serif
+      font-size: 30px
+      line-height: 1em
+      font-weight: 600
+      letter-spacing: 2.1px
+      word-spacing: 3px
+      text-transform: uppercase
+      @media screen and (max-width: 1600px)
+        letter-spacing: 0
+        word-spacing: 0
+      @media screen and (max-width: 1420px)
+        font-size: 22px
+        line-height: 32px
+      @media screen and (max-width: 991px)
+        font-size: 34px
+        line-height: 34px
+      @media screen and (max-width: 767px)
+        font-size: 18px
+        line-height: 18px
+      span
+        br
+          display: none
+        @media screen and (max-width: 991px)
+          display: block
+        @media screen and (max-width: 767px)
+          display: block
+      &_bold
+        color: $text
+        letter-spacing: 0.7px
+        font-family: "Proxima Nova Bold", sans-serif
+        font-size: 30px
+        line-height: 40px
+        text-transform: uppercase
+        padding: 58px 0 4px        
+        @media screen and (max-width: 1420px)
+          font-size: 22px
+          line-height: 32px
+        @media screen and (max-width: 991px)
+          font-size: 30px
+          line-height: 40px
+          padding: 38px 0 4px       
+        @media screen and (max-width: 767px)
+          padding: 58px 0 4px 
+          font-size: 13px
+          line-height: 13px
+    .default-btn
+      margin-top: 63px
+      margin-left: 0
+      @media screen and (max-width: 1600px)
+        margin-top: 25px
+      @media screen and (max-width: 1199px)
+        font-size: 18px
+      @media screen and (max-width: 991px)
+        height: 84px
+        font-size: 20px
+        margin-top: 43px
+        margin-left: auto
+      @media screen and (max-width: 767px)
+        height: 70px
+        font-size: 16px
+        margin-top: 28px
+        width: 282px
+  &-right
+    flex: 0 0 57.3%
+    max-width: 57.3%
+    @media screen and (max-width: 991px)
+      flex: 0 0 100%
+      max-width: 100%
+      position: relative
+    .display-mob
+      display: none
+      @media screen and (max-width: 991px)
+        display: block
+        width: 100%
+
+//section steps
+.steps
+
+  &-section
+    background: #fff
+    padding: 90px 15px 100px
+    @media only screen and (max-width: 991px)
+      padding-bottom: 80px
+      padding: 39px 15px 100px
+    @media only screen and (max-width: 767px)
+      padding: 40px 10px 0
+    &__h2
+      font-family: "Proxima Nova Bold", sans-serif
+      font-size: 40px
+      line-height: 50px
+      text-align: center
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      color: $colormain
+      margin-bottom: 90px
+      @media only screen and (max-width: 991px)
+        margin-bottom: 60px
+        font-size: 24px
+      @media only screen and (max-width: 767px)
+        font-size: 20px
+        line-height: 30px
+        letter-spacing: 0
+        margin-bottom: 20px
+    &__title
+      color: #3B2F28
+      text-align: center
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 30px
+      @media only screen and (max-width: 767px)
+        font-size: 22px
+    &__rules
+      margin-top: 6px
+      text-align: center
+      font-size: 17px
+      line-height: 33px
+      @media only screen and (max-width: 767px)
+        margin-top: 0
+        font-size: 20px
+        line-height: 40px
+      a
+        color: #4B60E8
+        text-decoration: underline
+        @media only screen and (max-width: 767px)
+          font-size: 20px !important
+          line-height: 40px !important
+
+        &:hover
+          text-decoration: none
+    &__btn
+      text-align: center
+      margin-top: 139px
+      @media only screen and (max-width: 991px)
+        margin-top: -20px
+      @media only screen and (max-width: 767px)
+        margin-top: -33px
+    &__wrapper
+      max-width: 1422px
+      padding-left: 15px
+      padding-right: 15px
+      margin-left: auto
+      margin-right: auto
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      @media only screen and (max-width: 1199px)
+        display: block
+      @media only screen and (max-width: 370px)
+        padding-left: 0
+        padding-right: 0     
+    button
+      margin: auto
+    .steps-item
+      width: 33%
+      color: #fff
+      -webkit-box-flex: 0
+      position: relative
+      padding: 0 15px
+      @media only screen and (max-width: 1199px)
+        margin: 0 auto 80px
+        flex: 0 0 50%
+        width: 100%
+        max-width: 50%      
+      @media only screen and (max-width: 767px)
+        margin-bottom: 55px
+        flex: 0 0 295px
+        max-width: 295px
+        padding: 0
+      &__title
+        color: $text
+        font-weight: bold
+        font-size: 18px
+        line-height: 25px
+        padding-bottom: 18px
+        text-transform: uppercase
+        display: flex
+        position: relative
+        @media only screen and (max-width: 767px)
+          flex-wrap: wrap
+          padding-bottom: 0
+          font-size: 16px
+        span
+          @media only screen and (max-width: 1199px)
+            display: inline-block
+            margin-left: 40px
+      &__icon
+        width: 38px
+        position: relative
+        @media only screen and (min-width: 992px)
+          margin-right: 43px
+          margin-top: 3px
+      &__text
+        color: $text
+        font-size: 15px
+        font-family: "Proxima Nova", sans-serif
+        padding-left: 81px
+        line-height: 28px
+        position: relative
+        @media only screen and (max-width: 1199px)
+          font-size: 14px
+          line-height: 26px
+        @media only screen and (max-width: 767px)
+          flex: 0 0 100%
+          max-width: 100%
+          margin-top: -4px
+          text-align: left
+          padding-left: 80px
+        br
+         @media only screen and (max-width: 767px)
+           display: none
+        a
+          color: $text
+          text-decoration: underline
+      &:first-child
+        .steps-item__text
+          br
+            display: block                  
+      &:last-child
+        .steps-item__text
+          br
+            @media only screen and (max-width: 991px)
+              display: none                          
+        a
+          color: $colormain
+          text-decoration: underline
+      &__number
+        position: absolute
+        left: 5px
+        top: -49px
+        font-family: "BebasNeue", sans-serif
+        font-size: 300px
+        line-height: 300px
+        font-weight: bold
+        color: #FEEDCC
+        @media only screen and (max-width: 1199px)
+          font-size: 200px
+          line-height: 200px
+          top: -33px
+        @media only screen and (max-width: 767px)
+          font-size: 150px
+          line-height: 60px
+          left: -10px
+          top: 0                      
+    &__rules
+      a
+        font-family: "Proxima Nova Bold", sans-serif
+        font-size: 22px
+        line-height: 40px
+        letter-spacing: 0.8px
+        color: $text
+        text-transform: none
+        margin-top: 27px
+        display: inline-block
+        text-decoration: none         
+        &:hover
+          text-decoration: underline
+        img
+          margin-left: 10px     
+  
+//section video
+.video
+  &-container
+    @media screen and (min-width: 1400px)
+      max-width: 1308px
+      min-width: 1308px
+      padding: 0  
+
+    .video
+      &__title
+        padding-top: 50px
+        padding-bottom: 90px
+        @media screen and (max-width: 1199px)
+          padding-top: 25px
+          padding-bottom: 45px
+        @media screen and (max-width: 991px)
+          padding-top: 45px
+        @media screen and (max-width: 767px)
+          padding-top: 110px
+      h3
+        color: $colormain
+        font-family: "Proxima Nova Bold", sans-serif
+        font-size: 40px
+        line-height: 60px
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        text-align: center
+        @media screen and (max-width: 1199px)
+          font-size: 29px
+          line-height: 35px
+        @media screen and (max-width: 991px)
+          font-size: 24px
+          line-height: 40px
+          max-width: 620px
+          margin: 0 auto
+        @media screen and (max-width: 767px)
+          font-size: 20px
+          line-height: 35px
+          max-width: 350px
+          margin: auto
+          padding-left: 15px
+          padding-right: 15px
+      span
+        font-family: "Proxima Nova", sans-serif
+        font-size: 40px
+        line-height: 60px
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        text-align: center
+        display: block
+        @media screen and (max-width: 1199px)
+          font-size: 18px
+          margin: 15px 0 25px
+        @media screen and (max-width: 991px)
+          font-size: 24px
+          line-height: 40px
+          max-width: 740px
+          margin: 0px auto 37px
+        @media screen and (max-width: 767px)
+          font-size: 20px
+          line-height: 35px
+          margin: 0px auto
+      .cover_video
+        width: 100%
+        max-height: 738px
+        background: #C4C4C4
+        background-size: cover
+        position: relative
+        display: block
+        cursor: pointer
+        overflow: hidden
+        border-radius: 0
+        background: url('../img/video_cover.jpg') center center no-repeat
+        @media screen and (max-width: 991px)
+          max-height: 400px
+        @media screen and (max-width: 767px)
+          border-radius: 10px
+          max-height: 350px
+        @media screen and (max-width: 580px)
+          max-height: 340px
+        @media screen and (max-width: 500px)
+          max-height: 280px
+        @media screen and (max-width: 400px)
+          max-height: 160px
+        &::before
+          content: ''
+          display: block
+          padding-top: 56.25%
+        .play
+          width: 109px
+          height: 109px
+          display: block
+          position: absolute
+          top: 50%
+          left: 50%
+          background: url('../img/play.svg') center center no-repeat
+          background-size: contain
+          transform: translate(-50%, -50%)
+          transition: all .3s ease-in-out
+          @media screen and (max-width: 991px)
+            width: 49px
+            height: 49px
+          @media screen and (max-width: 767px)
+            width: 30px
+            height: 30px
+            background: url('../img/play-white.svg') center center no-repeat
+          &:hover
+            -webkit-opacity: .5
+            -moz-opacity: .5
+            opacity: .5
+      .embed-responsive
+        border-radius: 17px
+        max-height: 738px
+        @media screen and (max-width: 991px)
+          max-height: 400px
+        @media screen and (max-width: 767px)
+          border-radius: 0
+          max-height: 350px
+        @media screen and (max-width: 580px)
+          max-height: 340px
+        @media screen and (max-width: 500px)
+          max-height: 280px
+        @media screen and (max-width: 400px)
+          max-height: 160px
+      .embed-responsive-16by9
+        border-radius: 0
+        &:before
+          padding-top: 0
+        &.active:before
+          padding-top: 56.25%
+  &-section
+    padding-bottom: 0
+    @media screen and (max-width: 767px)
+      margin-bottom: 20%
+    .beauty-lab
+      display: block
+      margin: 45px 0 285px 0
+      padding: 0px 25px 5px
+      background: #FFEFCE
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        bottom: 100%
+        left: 0
+        right: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        background:  url(../img/bg-video-top.png) no-repeat
+        background-position: bottom center
+        background-size: 100% auto
+      &::after
+        content: ''
+        position: absolute
+        top: 100%
+        left: 0
+        right: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        background:  url(../img/bg-video-bottom.png) no-repeat
+        background-position: top center
+        background-size: 100% auto
+        @media screen and (max-width: 991px)
+          background:  url(../img/bg-video-bottom-tab.png) no-repeat
+          background-position: top center
+          background-size: 100% auto
+      @media screen and (max-width: 991px)
+        margin: 45px 0 200px 0
+      @media screen and (max-width: 767px)
+        width: 100%
+        margin-left: 0
+        margin: 50px auto 0
+        padding: 0px 0 67px
+      .video
+        position: relative
+        @media screen and (min-width: 1345px)
+          padding: 18px 0 22px
+        &-section
+          padding: 50px 15px 100px
+          position: relative
+        @media screen and (max-width: 991px)
+          padding: 35px 5px 0
+        @media screen and (max-width: 767px)
+          padding-left: 0
+          padding-right: 0
+        @media screen and (max-width: 580px)
+          padding-top: 0
+          
+        &__button
+          display: -webkit-box
+          display: -ms-flexbox
+          display: flex
+          justify-content: center
+          .default-btn
+            margin: 55px 0 0
+            @media screen and (max-width: 1199px)
+              margin-top: 25px
+            @media screen and (max-width: 991px)
+              margin-top: 15px
+            @media screen and (max-width: 580px)
+              margin-top: 50px
+      &-wrap
+        max-width: 1518px
+        margin: 0 auto
+        @media screen and (max-width: 991px)
+          max-width: 820px
+      .top_text
+        font-family: "Proxima Nova Bold", sans-serif
+        font-size: 40px
+        line-height: 50px
+        text-align: center
+        letter-spacing: 1.6px
+        text-transform: uppercase
+        color: $text
+        padding-top: 105px
+        @media screen and (max-width: 991px)
+          font-size: 24px
+          line-height: 40px
+          padding-top: 95px
+        @media screen and (max-width: 767px)
+          font-size: 20px
+          line-height: 40px
+          padding: 50px 0 5px
+          letter-spacing: 1px        
+      .text
+        font-family: "Proxima Nova", sans-serif
+        font-size: 30px
+        line-height: 50px
+        text-align: center
+        text-transform: none
+        color: $text
+        padding-top: 14px
+        @media screen and (max-width: 991px)
+          font-size: 24px
+          line-height: 40px
+          padding: 0 55px
+        @media screen and (max-width: 767px)
+          padding: 0 10px
+          font-size: 16px
+          line-height: 25px          
+//slider
+.slider
+  &-section
+    .wrap-btn
+      position: relative
+      display: table
+      width: 94px
+      height: 24px
+      margin: -162px auto 62px 25%
+      @media screen and (max-width: 1439px)
+        position: relative
+        display: table
+        width: 92px
+        height: 24px
+        margin: -25px auto 62px 40.5%
+      // @media screen and (max-width: 1200px)
+      //   margin: -50px auto 62px 40.5%
+      @media screen and (max-width: 991px)
+        margin: -60px auto 50px auto
+      @media screen and (max-width: 767px)
+        margin: -30px auto 30px auto
+      .slick-prev
+        top: 0
+        left: 0
+        width: 36px
+        @media screen and (max-width: 1439px)
+          left: 0
+        @media screen and (max-width: 991px)
+          width: 27px
+        img
+          @media screen and (max-width: 991px)
+            width: 100%              
+      .slick-next
+        top: 0
+        right: 0
+        width: 36px
+        @media screen and (max-width: 1439px)
+          right: 0
+        @media screen and (max-width: 991px)
+          width: 27px
+        img
+          @media screen and (max-width: 991px)
+            width: 100%  
+    @media screen and (min-width: 992px)
+      margin-top: -35px
+      margin-bottom: 65px
+  &__button
+    margin-top: 15px
+    @media screen and (max-width: 1439px)
+      margin-top: 0
+    @media screen and (max-width: 991px)
+      margin-bottom: 90px
+    @media screen and (max-width: 767px)
+      margin-bottom: 68px
+    .default-btn
+      @media screen and (max-width: 991px)
+        width: 262px
+        height: 65px
+      @media screen and (max-width: 767px)
+        width: 282px
+          
+
+.slick
+  &-container
+    max-width: 1634px
+    margin: auto
+    position: relative
+    @media screen and (max-width: 1920px)
+      max-width: 1310px
+    @media screen and (max-width: 1439px)
+      padding: 0 15px
+      max-width: 974px
+    @media screen and (max-width: 991px)
+      max-width: 100%
+  &-initialized
+    & .slick-slide
+      display: flex
+      align-items: flex-start
+      outline: 0
+      @media screen and (max-width: 991px)
+        flex-wrap: wrap
+      .item
+        &-left
+          width: 25%
+          @media screen and (max-width: 1439px)
+            flex: 1 0 37%
+
+          @media screen and (max-width: 767px)
+            flex: 0 0 100%
+          img
+            margin-left: auto
+            margin-right: 85px
+            width: 100%
+            @media screen and (max-width: 1920px)
+              padding-top: 170px
+              width: 100%
+              padding-left: 15px
+              padding-right: 15px
+            @media screen and (max-width: 1439px)
+              padding: 0
+              max-width: 300px
+            @media screen and (max-width: 767px)
+              width: auto
+              max-width: 100%
+              padding-right: 15px
+              padding-left: 15px
+              margin: 0 auto
+          .display-mob
+            display: none
+            @media screen and (max-width: 767px)
+              display: block
+          .hidden-mob
+            display: block
+            @media screen and (max-width: 767px)
+              display: none                               
+        &-center
+          width: 45%
+          align-self: stretch
+          position: relative
+          padding-bottom: 180px
+          @media screen and (max-width: 1439px)
+            width: 56%
+            flex: 1 0 56%
+            padding-bottom: 0px
+          @media screen and (max-width: 767px)
+            padding: 0 20px
+            max-width: 320px
+            margin: 0 auto
+          h1
+            font-family: "Proxima Nova Bold", sans-serif
+            font-size: 80px
+            line-height: 50px
+            letter-spacing: 0.75px
+            text-transform: uppercase
+            color: $text
+            padding-top: 195px
+            @media screen and (max-width: 1199px)
+              padding-top: 75px
+            @media screen and (max-width: 1439px)
+              font-size: 50px
+              line-height: 50px
+              padding-top: 165px
+            @media screen and (max-width: 767px)
+              display: none            
+          h2
+            font-family: "Proxima Nova", sans-serif
+            font-size: 40px
+            line-height: 50px
+            letter-spacing: 1.6px
+            text-transform: uppercase
+            color: $colormain
+            padding-top: 62px
+            @media screen and (max-width: 1439px)
+              font-size: 24px
+              line-height: 34px
+              padding-top: 24px
+            @media screen and (max-width: 767px)
+              padding-left: 0px
+              font-size: 18px
+              line-height: 30px
+              padding-top: 27px
+              letter-spacing: 1px
+            span
+              font-family: "Proxima Nova Bold", sans-serif
+              @media screen and (max-width: 991px)
+                font-size: 24px
+                line-height: 34px
+              @media screen and (max-width: 767px)
+                font-size: 18px
+                line-height: 30px
+          p
+            font-family: "Proxima Nova", sans-serif
+            font-size: 24px
+            line-height: 35px
+            letter-spacing: 1px
+            color: #000000
+            padding-top: 35px
+            @media screen and (max-width: 1439px)
+              font-size: 18px
+              line-height: 30px
+              padding-top: 40px
+            br
+              @media screen and (min-width: 1440px)
+                display: none
+              @media screen and (max-width: 1439px)                              
+                display: none
+            @media screen and (max-width: 767px)
+              padding-left: 0px
+              font-size: 14px
+              line-height: 24px
+              letter-spacing: 0.5px
+              padding-top: 28px
+          .price
+            display: flex
+            align-items: baseline
+            margin-top: 55px
+            @media screen and (max-width: 1439px)
+              margin-top: 44px
+              padding-bottom: 67px  
+            @media screen and (max-width: 767px)
+              padding-left: 0
+              display: block
+              margin-top: 33px
+            span
+              @media screen and (max-width: 767px)
+                display: none
+            .art
+              font-family: "Proxima Nova", sans-serif
+              font-size: 16px
+              line-height: 33px
+              color: #333333
+              letter-spacing: 1.5px
+              padding-right: 32px
+              @media screen and (max-width: 1439px)
+                padding-right: 28px
+            .price__catalog
+              font-family: "Proxima Nova", sans-serif
+              font-size: 16px
+              line-height: 33px
+              color: #333333
+              letter-spacing: 0.8px
+              padding-left: 30px
+              @media screen and (max-width: 1439px)
+                padding-left: 30px
+              @media screen and (max-width: 767px)
+                padding-left: 0
+                line-height: 20px
+              span 
+                font-family: 'Prata'
+                font-weight: 600
+                color: #CB0000
+                padding-left: 2px
+                font-size: 35px
+                @media screen and (max-width: 1439px)
+                  font-size: 30px
+                @media screen and (max-width: 767px)
+                  display: inline-block
+                  font-size: 30px
+                span
+                  font-size: 18px
+            &__red
+              font-family: "Proxima Nova", sans-serif
+              font-size: 16px
+              line-height: 33px
+              letter-spacing: 1.5px
+              color: #CB0000
+        &-right
+          width: 30%
+          @media screen and (max-width: 1439px)
+            width: 180px
+            position: absolute
+            top: 0
+            right: 10px
+          @media screen and (max-width: 767px)
+            display: none
+          img
+              padding-top: 190px
+              max-width: 100%
+              padding-right: 15px
+              padding-left: 15px
+              @media screen and (max-width: 1920px)
+                width: 100%
+              @media screen and (max-width: 1439px)
+                padding-top: 0
+
+//section countdown
+.countdown
+  &-section
+    background: #fff
+    padding: 61px 15px 0
+    position: relative
+    @media screen and (max-width: 991px)
+      padding: 0 15px 64px
+      margin-top: 0
+    @media screen and (max-width: 767px)
+      padding: 40px 15px 60px
+      margin-top: 0
+    @media screen and (max-width: 370px)
+      padding: 40px 0px 60px    
+    .default-container
+      @media screen and (max-width: 767px)
+        padding: 0
+  &-container
+    @media screen and (max-width: 767px)
+      padding: 0 
+  &__title
+    color: $colormain
+    font-family: "Proxima Nova Bold", sans-serif
+    font-size: 30px
+    line-height: 37px
+    margin-bottom: 29px
+    text-align: center
+    letter-spacing: 1.5px
+    text-transform: uppercase
+    @media screen and (max-width: 991px)
+      font-size: 24px
+      line-height: 29px
+      margin-bottom: 15px
+    @media screen and (max-width: 767px)
+      font-size: 16px
+      letter-spacing: 0.05em
+      line-height: 19px
+      margin-bottom: 15px
+  canvas
+    background: #F9F8F6
+    border: 1px solid #D2D2D2
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    border-radius: 50%
+.ClassyCountdown
+  &-wrapper
+    text-align: center
+    > div
+      width: 213px !important
+      margin: 15px 30px
+      @media screen and (max-width: 1199px)
+        width: 150px !important
+      @media screen and (max-width: 991px)
+        width: 137px !important
+        margin: 20px
+      @media screen and (max-width: 767px)
+        width: 61px !important
+        height: 61px !important
+        margin: 0 9px
+    .ClassyCountdown                  
+      &-value
+        line-height: 1
+        top: calc(50% + 25px)
+        @media screen and (max-width: 991px)
+          top: calc(50% + 5px) !important
+        @media screen and (max-width: 767px)
+          top: 47% !important
+        div
+          font-size: 50px !important
+          line-height: 50px
+          color: $text
+          font-family: 'Prata'
+          text-align: center
+          @media screen and (max-width: 1199px)
+            font-size: 50px !important
+          @media screen and (max-width: 991px)
+            font-size: 50px !important
+            line-height: 50px !important
+          @media screen and (max-width: 767px)
+            font-size: 30px !important
+            transform: translateY(19px)
+          @media screen and (max-width: 580px)
+            transform: translateY(16px)                  
+          span
+            position: relative
+            top: -30px
+            @media screen and (max-width: 767px)
+              top: 0
+        span
+          @media screen and (max-width: 991px)
+            margin-top: 2px
+            display: inline-block
+            font-size: 16px !important
+            line-height: 25px !important
+            vertical-align: top
+          @media screen and (max-width: 767px)
+            margin-top: 3px
+            font-size: 14px !important
+            transform: translateY(35px)
+//section social 
+.social
+  &-top
+    background: #FFEFCE url('../img/bg-social-top-top.png') no-repeat
+    background-position: top center
+    background-size: 100% auto
+    position: relative
+    @media screen and (max-width: 767px)
+      // background: #FFEFCE url('../img/bg-social-top-mob-top.png') no-repeat
+      background: #FFEFCE 
+      background-position: top center
+      background-size: 100% auto
+      z-index: -2
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      width: 100%
+      height: 100%
+      z-index: 2
+      background: url(../img/bg-social-top-bottom.png) no-repeat
+      background-position: bottom center
+      background-size: 100% auto
+      // @media screen and (max-width: 991px)
+      //   background: url(../img/bg-social-top-tab.png) no-repeat
+      //   background-position: bottom center
+      //   background-size: 100% auto
+      @media screen and (max-width: 767px)
+        background: url(../img/bg-social-top-tab.png) no-repeat
+        background-position: bottom center
+        background-size: 100% auto
+    .social__text
+      margin-top: 0px
+      @media screen and (max-width: 991px)
+        margin-top: 0
+        padding-top: 117px
+        max-width: 100%
+      @media screen and (max-width: 767px)
+        padding: 32px 0 0                  
+      br
+        @media screen and (max-width: 991px)
+          display: none
+  &-section
+    padding: 192px 15px 208px
+    position: relative
+    z-index: 0
+    @media screen and (max-width: 991px)
+      padding: 20px 15px 80px
+    @media screen and (max-width: 767px)
+      padding: 80px 15px 70px 
+    @media screen and (max-width: 450px)
+      padding: 36px 0 44px    
+    &.bottom
+      background: #FFEFCE url('../img/bg-social-bottom.png') no-repeat
+      background-position: center -25px
+      background-size: 100% auto
+      padding-top: 1px
+      padding-bottom: 32px
+      @media screen and (max-width: 991px)
+        background: #FFEFCE url('../img/bg-social-bottom-tab.png') no-repeat
+        background-position: top center
+        background-size: 100% auto
+        padding: 100px 15px
+      @media screen and (max-width: 767px)
+        padding: 100px 0 52px
+      @media screen and (max-width: 450px)
+        padding: 42px 0 52px
+      .social__text
+        max-width: 100%
+        @media screen and (max-width: 991px)
+          padding-top: 0
+          margin-top: 0
+        @media screen and (max-width: 767px)
+          padding: 35px 0 22px
+        br
+          @media screen and (max-width: 1350px)
+            display: none
+      .social-p
+        font-family: "Proxima Nova", sans-serif
+        font-size: 25px
+        line-height: 60px
+        text-align: center
+        color: $text
+        @media screen and (max-width: 991px)
+          font-size: 18px
+          line-height: 40px
+        @media screen and (max-width: 767px)
+          font-size: 14px
+          line-height: 20px
+      .social-list
+        margin-bottom: 26px
+        @media screen and (max-width: 767px)
+          margin-bottom: 9px
+          margin-top: 39px
+    .default-container
+      @media screen and (max-width: 767px)
+        padding-left: 0
+        padding-right: 0
+  &__text
+    color: $text
+    font-family: "Proxima Nova Bold", sans-serif
+    font-size: 40px
+    line-height: 70px
+    text-align: center
+    color: $text
+    max-width: 80%
+    margin: 124px auto 0
+    text-transform: none
+
+    @media screen and (max-width: 1199px)
+      font-size: 35px
+      line-height: 45px
+    @media screen and (max-width: 991px)
+      font-size: 28px
+      line-height: 40px
+      max-width: 80%
+    @media screen and (max-width: 767px)
+      font-size: 18px
+      line-height: 26px
+      max-width: 100%
+      padding: 0
+    span
+      color: $colormain 
+  &__faded-text
+    color: $text
+    font-family: "Proxima Nova", sans-serif
+    font-size: 30px
+    line-height: 60px
+    text-align: center
+    padding-top: 22px
+    @media screen and (max-width: 991px)
+      font-size: 18px
+      line-height: 40px
+    @media screen and (max-width: 767px)
+      font-size: 14px
+      line-height: 26px
+      margin-top: 0
+      padding-top: 6px
+  &-list
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 750px
+    margin: 44px auto
+    position: relative
+    z-index: 2
+    @media screen and (max-width: 991px)
+      margin: 19px auto 109px
+      justify-content: center
+    @media screen and (max-width: 767px)
+      max-width: 300px
+      justify-content: center
+      margin: 13px auto 25px
+    @media screen and (max-width: 767px)
+      padding: 0
+      -webkit-box-pack: justify
+      -ms-flex-pack: justify
+      justify-content: center
+    &__item
+      border: 1px solid $text
+      border-radius: 50%
+      cursor: pointer
+      width: 93px
+      height: 93px
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      align-items: center
+      justify-content: center
+      transition: all 0.3s ease-in-out
+      @media screen and (max-width: 991px)
+        width: 73px
+        height: 73px
+        margin: 0 15px
+      @media screen and (max-width: 767px)
+        width: 35px
+        height: 35px
+        margin: 0 7px
+        text-align: center
+      @media screen and (max-width: 550px)      
+        margin: 0 5px
+      a
+        display: flex
+        align-items: center
+        justify-content: center
+      svg
+        stroke: $text
+        @media screen and (max-width: 767px)
+          max-width: 50%
+      path
+        fill: $text
+      &:hover
+        background: $text
+        svg
+          stroke: #EEF1F4
+        path
+          fill: #EEF1F4
+
+.registr
+  padding: 254px 0 0 0
+  background: #F7F7F7 url('../img/bg-registr-top.jpg') no-repeat
+  background-position: top center
+  background-size: 100% auto
+  @media screen and (max-width: 1200px)
+    padding: 90px 0 80px 0
+  @media screen and (max-width: 767px)
+    padding: 50px 0 40px 0
+  &-container
+    max-width: 1330px
+    padding: 0 20px
+    margin: 0 auto
+    @media screen and (max-width: 1200px)
+      max-width: 740px
+    @media screen and (max-width: 767px)
+      max-width: 500px
+  &-title
+      text-align: center
+      font-weight: bold
+      font-size: 40px
+      line-height: 50px
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      margin-bottom: 80px
+      @media screen and (max-width: 1200px)
+        font-size: 24px
+        line-height: 50px
+      @media screen and (max-width: 991px)
+        margin-bottom: 66px
+      @media screen and (max-width: 767px)
+          letter-spacing: 0
+          font-size: 20px
+          line-height: 30px
+          margin-bottom: 20px
+  &-row
+    display: flex
+    justify-content: space-between
+    margin-bottom: 60px
+    @media screen and (max-width: 991px)
+      margin-bottom: 20px
+    @media screen and (max-width: 767px)
+      flex-direction: column
+    @media screen and (max-width: 767px)
+        margin-bottom: 0px
+  &-item
+    flex-basis: 33.33%
+    min-width: 33.33%
+    text-align: center
+    padding: 0 30px
+    @media screen and (max-width: 991px)
+      padding: 0
+    @media screen and (max-width: 767px)
+      margin-bottom: 40px
+    &_img
+      text-align: center
+      width: 245px
+      height: 245px
+      box-shadow: inset 0px 0px 0 1px $colormain
+      border-radius: 50%
+      background-color: #fff
+      border: 5px solid #FFf
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 0 auto
+      margin-bottom: 37px
+      @media screen and (max-width: 1200px)
+        width: 172px
+        height: 172px
+        margin-bottom: 36px
+      @media screen and (max-width: 991px)
+        width: 172px
+        height: 172px
+        margin-bottom: 36px
+      @media screen and (max-width: 767px)
+        width: 105px
+        height: 105px
+    img
+      @media screen and (max-width: 991px)
+        height: 42px
+      @media screen and (max-width: 767px)
+        height: 30px
+    &_title
+      font-weight: bold
+      font-size: 24px
+      text-transform: uppercase
+      color: $colormain
+      margin-bottom: 12px
+      @media screen and (max-width: 1200px)
+        font-size: 18px
+        margin-bottom: 10px
+      @media screen and (max-width: 991px)
+        margin-bottom: 9px
+    &_subtitle
+      font-size: 18px
+      line-height: 33px
+      @media screen and (max-width: 1200px)
+        font-size: 15px
+      @media screen and (max-width: 991px)
+        font-size: 14px
+        line-height: 25px
+  &-section__btn
+    .default-btn
+
+//section company
+.company
+  display: flex
+  flex-wrap: wrap
+  @media screen and (max-width: 767px)
+    flex-wrap: wrap-reverse
+  &-section
+    position: relative
+    padding-top: 95px
+    overflow: hidden
+    padding-bottom: 95px
+    background: #F7F7F7
+    background-size: 100% 80%
+    &::before
+      content: ''
+      width: 100%
+      height: 95px
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      z-index: 0
+      background: #fff
+      @media only screen and (min-width: 1551px)
+        height: 150px
+      @media only screen and (max-width: 767px)
+        display: none
+
+
+    @media only screen and (min-width: 1551px)
+      padding-bottom: 150px 
+    @media screen and (max-width: 1550px)
+      padding-bottom: 27px
+    @media screen and (max-width: 991px)
+      overflow: hidden
+    @media screen and (max-width: 767px)
+      padding-top: 3px    
+    .default-container
+      position: static
+      @media only screen and (min-width: 1380px)
+        width: 1360px
+        max-width: 1360px
+      @media only screen and (max-width: 767px)
+        padding: 0
+  &-left
+    flex: 0 0 51%
+    max-width: 51%
+    padding-top: 123px
+    padding-left: 10px
+    @media screen and (max-width: 1199px)
+      padding-top: 20px
+    @media screen and (max-width: 991px)
+      padding-left: 15px
+      padding-right: 15px
+      padding-top: 0
+      padding-bottom: 25px
+    @media screen and (max-width: 767px)
+      flex: 0 0 100%
+      max-width: 100%
+      padding-bottom: 0
+    &__title
+      font-family: "Proxima Nova Bold", sans-serif
+      font-size: 60px
+      line-height: 60px
+      letter-spacing: 1.5px
+      text-transform: uppercase
+      color: $text
+      @media screen and (max-width: 1100px)
+        font-size: 76px
+      @media screen and (max-width: 991px)
+        font-size: 60px
+        line-height: 60px
+        text-transform: none
+      @media screen and (max-width: 767px)
+        display: none
+      br
+        @media screen and (max-width: 1199px)
+          display: none      
+    &__text
+      font-family: "Proxima Nova", sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 28px
+      color: $text
+      max-width: 400px
+      @media only screen and (max-width: 991px)
+        font-size: 14px
+        padding-right: 10px
+      @media screen and (max-width: 767px)
+        line-height: 30px
+        max-width: 100%      
+      p
+        font-style: italic
+        line-height: 28px
+        margin-top: 25px
+        max-width: 380px
+        @media only screen and (max-width: 991px)
+          margin-top: 15px
+        @media screen and (max-width: 767px)
+          margin-top: 13px
+          font-size: 14px
+          line-height: 24px 
+  &-right
+    flex: 0 0 49%
+    max-width: 49%
+    @media only screen and (max-width: 1790px)
+      position: relative
+    @media screen and (max-width: 767px)
+      flex: 0 0 100%
+      max-width: 100%    
+    img
+      position: absolute
+      right: 0
+      max-width: 910px
+      top: 5px
+      @media only screen and (max-width: 1790px)
+        left: -20px
+        top: -90px
+      @media only screen and (max-width: 1550px)
+        max-width: 787px
+      @media only screen and (max-width: 1350px)
+        max-width: 700px
+      @media only screen and (max-width: 1199px)
+        max-width: 610px
+      @media only screen and (max-width: 991px)
+        left: 0
+        max-width: 550px
+      @media only screen and (max-width: 767px)
+        position: static
+        margin-left: auto
+
+      &.company-right__girl_mobile
+        display: none
+        width: 374px
+        margin: 31px 0 11px
+        position: relative
+        left: 50%
+        transform: translateX(-50%)    
+        @media only screen and (max-width: 767px)
+          display: block
+          top: 0
+    &__girl
+      @media only screen and (max-width: 767px)
+        display: none
+    &__title-mobile
+      color: $colormain
+      font-family: "Proxima Nova Bold", sans-serif
+      font-size: 24px
+      line-height: 29px
+      text-align: center
+      display: none
+      @media only screen and (max-width: 767px)
+        display: block
+        font-family: "Proxima Nova Bold", sans-serif
+        font-size: 20px
+        line-height: 24px
+        text-align: center
+        text-transform: uppercase
+        color: $text
+  &-image
+    margin-top: 75px
+    width: 100%
+    @media only screen and (max-width: 1199px)
+      margin-top: 25px
+    @media only screen and (max-width: 991px)
+      height: 177px
+      object-fit: cover
+      display: none
+
+    &-mob
+      display: none
+      @media only screen and (max-width: 991px)
+        display: block
+        height: 177px
+        object-fit: cover
+        width: 100%        
+      @media only screen and (max-width: 767px)
+        display: none
+
+.acquainted
+  color: #B72133
+  font-family: Open Sans, sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  display: inline-block
+  line-height: 33px
+  margin-top: 43px
+  margin-bottom: 28px
+  text-transform: uppercase
+  @media screen and (max-width: 580px)
+    margin: 15px 0
+  &:hover
+    // color: #B72133
+    // opacity: 0.6
+
+//section progress
+.motion
+  display: flex
+  flex-wrap: nowrap
+  @media screen and (max-width: 991px)
+    flex-wrap: wrap
+  &-section
+    padding: 15px 15px
+    @media screen and (max-width: 1550px)
+      padding: 100px 15px     
+    @media screen and (max-width: 991px)
+      padding: 50px 15px 33px
+    @media screen and (max-width: 767px)
+      padding: 25px 0
+    .default-container
+      @media only screen and (min-width: 1425px)
+        width: 1390px
+        max-width: 1390px
+      @media only screen and (max-width: 767px)
+        padding: 0 15px
+  &-fr
+    flex-direction: column
+    flex: 0 0 50%
+    max-width: 50%
+    @media screen and (max-width: 991px)
+      flex: 0 0 100%
+      max-width: 100%    
+  &-item
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-wrap: nowrap
+    margin-bottom: 30px
+    padding: 0 15px 0 110px
+    @media only screen and (max-width: 1424px)
+      padding: 0 15px 0 15px
+    @media screen and (max-width: 991px)
+      flex: 0 0 100%
+      max-width: 100%
+      margin-bottom: 25px
+    @media screen and (max-width: 767px)
+      padding-left: 0
+      padding-right: 0
+  
+    &:nth-child(5),
+    &:nth-child(6)
+      margin-bottom: 0
+
+    &:nth-child(5)
+      @media screen and (max-width: 991px)
+        margin-bottom: 30px
+
+    br
+      @media screen and (max-width: 991px)
+        display: none
+      @media screen and (max-width: 767px)
+        display: block        
+    &__num
+      color: $text
+      font-family: "Proxima Nova", sans-serif
+      font-size: 40px
+      line-height: 49px
+      -webkit-box-flex: 0
+      -ms-flex: 0 0 23px
+      flex: 0 0 23px
+      max-width: 23px
+      text-align: center
+      @media screen and (max-width: 991px)
+        display: none
+      @media screen and (max-width: 767px)
+        font-size: 30px
+        line-height: 37px
+      &__mob
+        color: $text
+        font-family: "Proxima Nova", sans-serif
+        font-size: 40px
+        line-height: 49px
+        -webkit-box-flex: 0
+        -ms-flex: 0 0 23px
+        flex: 0 0 23px
+        max-width: 23px
+        text-align: center
+        display: none
+        @media screen and (max-width: 991px)
+          display: block
+        @media screen and (max-width: 767px)
+          font-size: 30px
+          line-height: 37px                    
+    &__line
+      background-color: #000
+      height: 1px
+      width: 100.5px
+      opacity: 0.5
+      margin: 0 15px
+      flex: 0 0 auto
+      @media screen and (max-width: 1199px)
+        width: 60px
+      @media screen and (max-width: 991px)
+        width: 100.5px
+      @media screen and (max-width: 767px)
+        width: 20px
+    &__text
+      color: $text
+      font-family: "Proxima Nova", sans-serif
+      font-size: 24px
+      line-height: 1
+      @media screen and (max-width: 767px)
+        font-size: 20px
+        line-height: 24px
+      span
+        color: $colormain
+        font-family: "Proxima Nova Bold", sans-serif
+      br
+        display: none
+        @media screen and (max-width: 767px)
+          display: block      
